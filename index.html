@@ -11,7 +11,11 @@
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
+		  <!-- Bootstrap Material Design -->
+		  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+		  <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <style type="text/css">
 
       	html,body{
@@ -138,33 +142,36 @@
   	</div>
 
 
-  	<script type="text/javascript">
-    	
-    	var botaoMostrar = document.getElementsByClassName("botaoMostrar");
-    	var i = 0;
-    	for(i=0;i<botaoMostrar.length;i++)
-    	{
-    		botaoMostrar[i].onclick = function(){
-    			
-    			if(this.innerHTML == "Mostrar")
-    				this.innerHTML = "Esconder";
-    			else
-    				this.innerHTML = "Mostrar";
+  	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    			if(this.parentElement.childNodes[3].style.display == "block")
-    		 	this.parentElement.childNodes[3].style.display = "none";
-    			 else
-    		 	this.parentElement.childNodes[3].style.display = "block";
-    		}
-    	}
-    	
+    <script src = "dist/js/material.js"></script>
+    <script src = "dist/js/ripples.js"></script>
+    <script type="text/javascript">
+      
+      $(function() {
+        $.material.init();
+      });
+      var botaoMostrar = document.getElementsByClassName("botaoMostrar");
+      var i = 0;
+      for(i=0;i<botaoMostrar.length;i++)
+      {
+        botaoMostrar[i].onclick = function(){
+          
+          if(this.innerHTML == "Mostrar")
+            this.innerHTML = "Esconder";
+          else
+            this.innerHTML = "Mostrar";
+
+          if(this.parentElement.childNodes[3].style.display == "block")
+          this.parentElement.childNodes[3].style.display = "none";
+           else
+          this.parentElement.childNodes[3].style.display = "block";
+        }
+      }
+      
 
 
     </script>
-  	<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
   </body>
 </html>
