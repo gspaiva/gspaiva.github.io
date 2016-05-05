@@ -93,16 +93,19 @@
 
       var botaoMostrar = document.getElementsByClassName("botaoMostrar");
       var i = 0;
+      var mostrar = true;
+
       for(i=0;i<botaoMostrar.length;i++)
       {
         botaoMostrar[i].onclick = function(){
           
-          if(this.innerHTML == "Mostrar")
+          if(mostrar)
           {
             this.innerHTML = "Esconder";
-            console.log(this.innerHTML);
+            mostrar = false;
           }
           else{
+            mostrar = true; 
             this.innerHTML = "Mostrar";
           }
 
