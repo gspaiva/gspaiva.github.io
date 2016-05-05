@@ -43,6 +43,7 @@
   			<div class="col-md-8 conteudo">
   				
   				<div style = "height:80px;"></div>
+
   				<div id = "sobre1" class="panel panel-default">
 				  <div class="panel-body">
 				    <h1>Sobre</h1>
@@ -97,9 +98,16 @@
         botaoMostrar[i].onclick = function(){
           
           if(this.innerHTML == "Mostrar")
+          {
+
             this.innerHTML = "Esconder";
-          else
+            console.log(this.innerHTML);
+          }
+          else{
+
             this.innerHTML = "Mostrar";
+          console.log(this.innerHTML);
+          }
 
           if(this.parentElement.childNodes[3].style.display == "block")
           this.parentElement.childNodes[3].style.display = "none";
