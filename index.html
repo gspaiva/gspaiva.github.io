@@ -1,124 +1,35 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="dist/css/style.css">
-	  <!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+<head>
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-		  <!-- Bootstrap Material Design -->
-		  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
-		  <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
-          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  </head>
-  <body>
-  		
-  	<div class = "container-fluid" style = "height:100% !important;">
-  		<div class="row" style = "height:100% !important;">
-  			<div class = "col-md-4 about">
-  				<div style = "height:90px;"></div>
-  				<div class="col-md-offset-3 col-sm-offset-5 col-xs-offset-3 conteudo-about">
-  					<img src="pp.jpg" alt="Foto de Gabriel Silva Paiva" class="img-circle foto">
-  				</div>
-  				<h2>
-  					Gabriel Silva Paiva </br>
-  					20 Anos </br>
-  					Brasil
-  				</h2>	
-  				<p>
-  					"Não tentes ser bem sucedido, tenta antes ser um homem de valor"
-            Albert Einstein
-
-  				</p>
-  				
-  			
-  			</div>
-  			<div class="col-md-8 conteudo">
-  				
-  				<div style = "height:80px;"></div>
-
-  				<div id = "sobre1" class="panel panel-default">
-				  <div class="panel-body">
-				    <h1>Sobre</h1>
-          
-  				    <p>
-  				    	Estudante de Ciência da computação na UFLA , desenvolvedor web na empresa júnior de computação da universidade (CompJúnior). Tenho 20 anos de idade , gosto muito de futebol , gosto muito de desenvolver aplicações Web e agora estou adentrando no mundo mobile desenvolvendo aplicações para a plataforma Android.
-  				    </p>
-        
-				    <button type="button"  class="btn btn-default botaoMostrar" data-container="body" data-toggle="popover" data-placement="right" >Mostrar</button>
-				  </div>
-				</div>	
-				<div id = "sobre2"class="panel panel-default">
-				  <div class="panel-body">
-				    <h1>Portifólio</h1>
-				    <p>
-              
-              <a href="http://www.jornadajuridica.ufla.br/">Jornada Júridica UFLA</a> , Atuei como desenvolvedor Back-end , utilizando a linguagem PHP junto com o framework CAKEPHP , alguns momentos ajudei no front-end , mas na maioria do tempo trabalhei só com o lado servidor da aplicação.
-              <br/>
-              <br/>
-               <a href="http://www.frederich.compjunior.com.br/">Frederich</a>, Projeto que está em desenvolvimento , estou trabalhando como full-stack , mas até o momento venho desempenhando mais tarefas envolvidas com o lado cliente da aplicação.
-            </p>
-				    <button type="button" class="btn btn-default botaoMostrar" data-container="body" data-toggle="popover" data-placement="right" >Mostrar</button>
-				  </div>
-				</div>	
-				<div id = "sobre 3"class="panel panel-default">
-				  <div class="panel-body">
-				    <h1>Contato</h1>
-				    <p>Email : gabriel_silvapaiva@hotmail.com </br>
-            </p>
-				    <button type="button" class="btn btn-default botaoMostrar" data-container="body" data-toggle="popover" data-placement="right" >Mostrar</button>
-				  </div>
-				</div>	
-  			</div>
-  		</div>
-  		
-  	</div>
+  <title>Calculadora</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
 
 
-  	<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    <script src = "dist/js/material.js"></script>
-    <script src = "dist/js/ripples.js"></script>
-    <script type="text/javascript">
-      
-      $(function() {
-        $.material.init();
-      });
-
-      var botaoMostrar = document.getElementsByClassName("botaoMostrar");
-      var i = 0;
-      var mostrar = true;
-
-      for(i=0;i<botaoMostrar.length;i++)
-      {
-        botaoMostrar[i].onclick = function(){
-          
-          if(mostrar)
-          {
-            this.innerHTML = "Esconder";
-            mostrar = false;
-          }
-          else{
-            mostrar = true; 
-            this.innerHTML = "Mostrar";
-          }
-          if(this.parentElement.childNodes[3].style.display == "block")
-          this.parentElement.childNodes[3].style.display = "none";
-           else
-          this.parentElement.childNodes[3].style.display = "block";
-        }
-      }
-      
+    <input id = "x" type = "text" >X</input>
+    <button id = "calcular" onclick="calcular()">Calcular frequencia</button> 
 
 
-    </script>
-  </body>
+<h3> A frequencia é : <h4 id = "frequencia"> </h4></h3>
+
+<script type="text/javascript">
+  function calcular ()
+  {
+     var x = document.getElementById('x').value;
+     var botao = document.getElementById('calcular');
+     var label = document.getElementById('frequencia');
+     var frequencia = ((100*x)/24);
+     label.innerHTML = frequencia;
+  }
+
+</script>
+
+
+
+</body>
 </html>
+
