@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Calculadora</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+
+    <h1>Calculadora da cacholinha</h1>
+
+    <input id = "x" type = "text" >X</input>
+    <button id = "calcular" onclick="calcular()">Calcular frequencia</button> 
+
+
+<h3> A frequencia é : <h4 id = "frequencia"> </h4></h3>
+
+<script type="text/javascript">
+  function calcular ()
+  {
+     var x = document.getElementById('x').value;
+     var botao = document.getElementById('calcular');
+     var label = document.getElementById('frequencia');
+     var frequencia = ((100*x)/24);
+     label.innerHTML = frequencia;
+  }
+
+</script>
+
+
+
+</body>
+</html>
+
+ 
