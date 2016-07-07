@@ -9,24 +9,34 @@
 <body>
 
     <h1>Calculadora da cacholinha</h1>
+    Fórmula
 
-    Digite o x : <input id = "x" type = "text" ></input>
+	n1 - 100
+	n2 - frequencia
+
+	frequencia = ((n2*100)/ n1);
+    
+    Digite o n1 : <input id = "x" type = "text" ></input>
+    Digite o n2 : <input id = "x2" type = "text" ></input>
     <button id = "calcular" onclick="calcular()">Calcular frequencia</button> 
 
 
 <h3> A frequencia é : <h4 id = "frequencia"> </h4></h3>
 
+
 <script type="text/javascript">
   function calcular ()
   {
      var x = document.getElementById('x').value;
+     var x2 = document.getElementById('x2').value;
      var botao = document.getElementById('calcular');
      var label = document.getElementById('frequencia');
-     var frequencia = ((100*x)/24);
+     var frequencia = ((100*x2)/x);
      label.innerHTML = frequencia;
   }
 
 </script>
+
 
 
 
